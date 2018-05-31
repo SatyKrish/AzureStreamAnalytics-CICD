@@ -6,7 +6,7 @@ A reference guide for setting up continous integration and deployment of Stream 
 ## Introduction
 StreamAnalyticsDevOps solution includes a reference implementation of Stream Analytics job using VisualStudio 2017. We will be using Build and Release capabilities of VSTS for continous integration and deployment of Stream Analytics job to Azure. Clone this repository inorder to test the Stream Analytics job locally.
 
-![Solution Structure](./img/SolutionStructure.jpg)
+![SolutionStructure](img/SolutionStructure.JPG)
 
 > For more information about working with Stream Analytics project using Visual Studio, please refer [Use Azure Stream Analytics tools for Visual Studio](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-tools-for-visual-studio).
 
@@ -15,7 +15,7 @@ StreamAnalyticsDevOps solution includes a reference implementation of Stream Ana
 
 Stream Analytics Visual Studio project doesn't support adding NuGet package reference using NuGet Package Manager. As this NuGet package is only needed for continuous integration and deployment process, we can reference it by adding a packages.config file with package details to the Stream Analytics Visual Studio project.
 
-![packages.config](./img/PackagesConfig.jpg)
+![packages.config](img/PackagesConfig.JPG)
 
 Edit packages.config file and paste following lines.
 
@@ -31,7 +31,7 @@ We will use VSTS build definition for continous integration. For this example, w
 
 1.	Add NuGet restore task and configure the path to solution or packages.config in SampleStreamAnalyticsApplication project.
 
-![NuGetRestore](./img/NuGetRestore.jpg)
+![NuGetRestore](img/NuGetRestore.JPG)
 
 2.	Add MSBuild task and paste the following line under MSBuild Arguments. Ensure **ASATargetsFilePath** maps to the folder where Microsoft.Azure.StreamAnalytics.CICD.1.1.0 NuGet package is restored.
 
@@ -40,25 +40,25 @@ We will use VSTS build definition for continous integration. For this example, w
 /p:ASATargetsFilePath=$(Build.SourcesDirectory)\src\packages\Microsoft.Azure.StreamAnalytics.CICD.1.1.0\build\StreamAnalytics.targets
 ```
 
-![MSBuild](./img/MSBuild.jpg)
+![MSBuild](img/MSBuild.JPG)
 
 3.	Add Copy file task to copy the build output to staging directory.
 
 > Building Stream Analytics project generates ARM template and parameters file, which will be used in VSTS Release definition for deploying Stream Analytics job to Azure.
 
-![CopyBuildOutput](./img/CopyBuildOutput.jpg)
+![CopyBuildOutput](img/CopyBuildOutput.JPG)
 
 4.	Add Publish Artifacts tasks to publish the build artifacts to VSTS server.
 
-![PublishArtifact](./img/PublishArtifact.jpg)
+![PublishArtifact](img/PublishArtifact.JPG)
 
 5. Save and Queue a new build for testing purpose. Once the build has completed, verify build artifacts in drop folder. Ensure template and parameter files necessary for deployment are generated.
 
-![BuildArtifacts](./img/BuildArtifacts.jpg)
+![BuildArtifacts](img/BuildArtifacts.JPG)
 
 6. Enable continous integration option, so that the solution is built upon any commit to the repository and updated artifacts are generated.
 
-![EnableContinousIntegration](./img/EnableCI.jpg)
+![EnableContinousIntegration](img/EnableCI.JPG)
 
 ## Configure Continous Deployment
 We will use VSTS release definition for continous deployment. For this example, we will create a new release definition using empty template.
