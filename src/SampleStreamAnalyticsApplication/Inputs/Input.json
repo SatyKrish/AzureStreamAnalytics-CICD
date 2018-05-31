@@ -1,0 +1,25 @@
+﻿{
+  "CompresssionType": "None",
+  "Sample": null,
+  "EventHubProperties": {
+    "ConsumerGroupName": "streamanalytics-consumergroup",
+    "EventHubName": "streamanalytics-eventhub",
+    "ServiceBusNamespace": "streamanalytics-eventhub-ns",
+    "SharedAccessPolicyKey": null,
+    "SharedAccessPolicyName": "RootManageSharedAccessKey"
+  },
+  "BlobStorageProperties": null,
+  "IoTHubProperties": null,
+  "BlobReferenceProperties": null,
+  "DataSourceCredentialDomain": "b4b4e6e2-df06-4b73-b97c-592edadf6163.StreamAnalyticsCredential",
+  "Name": "CustomerStream",
+  "Type": "Data Stream",
+  "DataSourceType": "Event Hub",
+  "Serialization": {
+    "Encoding": "UTF8",
+    "Type": "Json",
+    "FieldDelimiter": null,
+    "Format": null
+  },
+  "ScriptType": "Input"
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "Id": "BE6BFA5C-E15B-4F0F-BA8A-84DA892E8A47",
+    "Name": "CustomerA",
+    "Gender": "Male",
+    "Email": "customera@email.com",
+    "PhoneNumber": "9876543210",
+    "City": "CityA",
+    "Country": "CountryA"
+  },
+  {
+    "Id": "27AD3F68-9461-458B-B664-CC8FDCED9DC0",
+    "Name": "CustomerB",
+    "Gender": "Female",
+    "Email": "customerb@email.com",
+    "PhoneNumber": "9876543211",
+    "City": "CityB",
+    "Country": "CountryB"
+  },
+  {
+    "Id": "27AD3F68-9461-458B-B664-CC8FDCED9DC0",
+    "Name": "CustomerC",
+    "Gender": "Female",
+    "Email": "customerc@email.com",
+    "PhoneNumber": "9876543212",
+    "City": "CityC",
+    "Country": "CountryB"
+  }
+]

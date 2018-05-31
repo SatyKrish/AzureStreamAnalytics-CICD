@@ -1,0 +1,52 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e229e305-bdcc-4d19-8a5a-85e9db027369</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>SampleStreamAnalyticsApplication</AssemblyName>
+    <StartFile>Script.asaql</StartFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ASATargetsFilePath>$(AppData)\Microsoft\DataLake\MsBuild\1.0\StreamAnalytics.targets</ASATargetsFilePath>
+    <Name>SampleStreamAnalyticsApplication</Name>
+    <RootNamespace>SampleStreamAnalyticsApplication</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="Script.asaql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Configure Include="Inputs\Input.json">
+      <SubType>Input</SubType>
+    </Configure>
+    <Configure Include="Inputs\local_CustomerStream.json">
+      <SubType>InputMock</SubType>
+    </Configure>
+    <Configure Include="Outputs\Output.json">
+      <SubType>Output</SubType>
+    </Configure>
+    <Configure Include="JobConfig.json">
+      <SubType>JobConfig</SubType>
+    </Configure>
+    <Content Include="packages.config">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SampleData\CustomerSample.json">
+      <SubType>Unknown</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Inputs" />
+    <Folder Include="Functions" />
+    <Folder Include="SampleData" />
+    <Folder Include="Outputs" />
+  </ItemGroup>
+  <Import Project="$(ASATargetsFilePath)" />
+</Project>

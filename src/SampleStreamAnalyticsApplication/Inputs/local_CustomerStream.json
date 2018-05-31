@@ -1,0 +1,8 @@
+﻿{
+  "InputAlias": "CustomerStream",
+  "Type": "Data Stream",
+  "Format": "Json",
+  "FilePath": "F:\\IP\\Repos\\MA-StreamAnalytics-CICD\\src\\AzureStreamAnalytics.CICD\\SampleStreamAnalyticsApplication\\SampleData\\CustomerSample.json",
+  "Sample": "{\r\n  \"Id\": \"BE6BFA5C-E15B-4F0F-BA8A-84DA892E8A47\",\r\n  \"Name\": \"CustomerA\",\r\n  \"Gender\": \"Male\",\r\n  \"Email\": \"customera@email.com\",\r\n  \"PhoneNumber\": \"9876543210\",\r\n  \"City\": \"CityA\",\r\n  \"Country\": \"CountryA\"\r\n}",
+  "ScriptType": "InputMock"
+}

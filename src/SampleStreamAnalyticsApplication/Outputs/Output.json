@@ -1,0 +1,28 @@
+﻿{
+  "EventHubProperties": null,
+  "BlobStorageProperties": null,
+  "SQLDatabaseProperties": {
+    "Database": "streamanalytics-database",
+    "Password": null,
+    "Server": "streamanalytics-sample.database.windows.net",
+    "Table": "dbo.Customer",
+    "User": "sauser"
+  },
+  "TableStorageProperties": null,
+  "ServiceBusQueueProperties": null,
+  "ServiceBusTopicProperties": null,
+  "DocumentDbProperties": null,
+  "PowellBIProperties": null,
+  "AzureDataLakeStoreProperties": null,
+  "AzureFunctionProperties": null,
+  "DataSourceCredentialDomain": "dc04e1bd-2931-4de5-9e32-0783ff5016b1.StreamAnalyticsCredential",
+  "Name": "CustomerStore",
+  "DataSourceType": "SQL Database",
+  "Serialization": {
+    "Encoding": "UTF8",
+    "Type": "Json",
+    "FieldDelimiter": null,
+    "Format": "LineSeparated"
+  },
+  "ScriptType": "Output"
+}
